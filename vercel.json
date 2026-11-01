@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "generate.py",
+      "use": "@vercel/python",
+      "config": { "maxDuration": 10 }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "generate.py" }
+  ]
+}
